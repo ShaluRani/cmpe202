@@ -5,20 +5,42 @@ import java.text.DecimalFormat;
 public class Receipt implements Component {
 
     protected ArrayList<Component> components = new ArrayList<Component>()  ;
-    protected String description ; 
+    protected String description,display ; 
     
-    public Receipt ()
+    public Receipt (String desc)
     {
-        
+        description = desc;
     }
 
-    public void printReceiptDescription() {
-        //DecimalFormat fmt = new DecimalFormat("0.00");
-        for (Component obj  : components)
+    public void printDescription() {
+        
+        if(description.equals("CustReceipt"))
         {
-            obj.printReceiptDescription();
+            DecimalFormat fmt = new DecimalFormat("0.00");
+            System.out.println("\nCustomer Receipt:");
+            for (Component obj  : components)
+            {
+                obj.getPrice();
+                obj.printDescription();
+                
+            }
         }
+        else 
+        if(description.equals("KitchenReceipt"))
+        {
+            System.out.println("\nKitchen Receipt:");
+            for (Component obj  : components)
+            {
+                obj.printDescriptionSorted();
+            }
+        }
+        
     }
+    
+    public void printDescriptionSorted() {
+    }
+    
+
     
     public void addChild(Component c) {
         components.add( c ) ;
@@ -31,6 +53,12 @@ public class Receipt implements Component {
     public Component getChild(int i) {
         return components.get( i ) ;
     }
+    
+      public void getPrice()
+      {
+        }
+        
+
      
 }
  
