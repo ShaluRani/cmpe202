@@ -11,7 +11,6 @@ public class Toppings extends LeafDecorator
     // 4 toppings free, extra +.75
     public void setOptions( String[] options )
     {
-        System.out.println("Entering toppings\n"+this.price);
         this.options = options ;
         //if ( options.length > 4 )
             //this.price += (options.length-4) * 0.75 ;

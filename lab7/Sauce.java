@@ -15,7 +15,6 @@ public class Sauce extends LeafDecorator
         this.options = options ;
         if ( options.length > 1 )
             this.price += (options.length-1) * 0.50 ;
-        System.out.println("Entering Sauce\n"+this.price);
     }
     
     public String getDescription() 

@@ -22,7 +22,6 @@ public class PremiumToppings extends LeafDecorator
                 }
             this.price += len * 1.00 ;
         }
-        System.out.println("Entering PremiumToppings\n"+this.price);
     }
     
     public String getDescription() 

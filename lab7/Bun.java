@@ -11,14 +11,15 @@ public class Bun extends LeafDecorator
     // 1 sauce free, extra +.75
     public void setOptions( String[] options )
     {
-        
         this.options = options ;
-        if(options.equals("Gluten-Free Bun") || options.equals("Hawaiian Bun"))
-            this.price += 1.00 ;
-        else if(options.equals("Pretzel Bun"))
-            this.price += 0.50 ;
-        else this.price += 0.00 ;
-        System.out.println("Entering Bun\n"+this.price);
+        for ( int i = 0; i<options.length; i++ )
+        {
+            if(options[i].equals("Gluten-Free Bun") || options[i].equals("Hawaiian Bun"))
+                this.price += 1.00 ;
+            else if(options[i].equals("Pretzel Bun"))
+                this.price += 0.50 ;
+            else this.price += 0.00 ;
+        }
     }
     
     public String getDescription() 

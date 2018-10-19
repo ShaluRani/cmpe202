@@ -20,7 +20,6 @@ public class Burger extends LeafDecorator
             if ( "1lb.".equals(options[i]) ) this.price += 18.00 ;
             if ( "In A Bowl".equals(options[i]) ) this.price += 1.00 ;
         }
-        System.out.println("Entering Burger\n"+this.price);
     }
     
     public String getDescription() 

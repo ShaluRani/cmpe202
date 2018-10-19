@@ -16,7 +16,6 @@ public class PremiumCheese extends LeafDecorator
         this.options = options ;
         if ( options.length > 0 )
             this.price += (options.length) * 1.50 ;
-        System.out.println("Entering PremiumCheese\n"+this.price);
     }
     
     public String getDescription() 

@@ -14,7 +14,6 @@ public class Cheese extends LeafDecorator
         this.options = options ;
         if ( options.length > 1 )
             this.price += (options.length-1) * 1.00 ;
-        System.out.println("Entering Cheese\n"+this.price);
     }
     
     public String getDescription() 

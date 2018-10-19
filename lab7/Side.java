@@ -14,7 +14,6 @@ public class Side extends LeafDecorator
         this.options = options ;
         if ( options.length > 0 )
             this.price += (options.length) * 3.00 ;
-        System.out.println("Entering Side\n"+this.price);
     }
     
     public String getDescription() 
